@@ -1,0 +1,14 @@
+C:\Users\nicso\OneDrive\Área de Trabalho\projetos\bootcamp-dotnet-dio\aula-13-12\bin\Debug\net8.0\aula-13-12.exe
+C:\Users\nicso\OneDrive\Área de Trabalho\projetos\bootcamp-dotnet-dio\aula-13-12\bin\Debug\net8.0\aula-13-12.deps.json
+C:\Users\nicso\OneDrive\Área de Trabalho\projetos\bootcamp-dotnet-dio\aula-13-12\bin\Debug\net8.0\aula-13-12.runtimeconfig.json
+C:\Users\nicso\OneDrive\Área de Trabalho\projetos\bootcamp-dotnet-dio\aula-13-12\bin\Debug\net8.0\aula-13-12.dll
+C:\Users\nicso\OneDrive\Área de Trabalho\projetos\bootcamp-dotnet-dio\aula-13-12\bin\Debug\net8.0\aula-13-12.pdb
+C:\Users\nicso\OneDrive\Área de Trabalho\projetos\bootcamp-dotnet-dio\aula-13-12\obj\Debug\net8.0\aula-13-12.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nicso\OneDrive\Área de Trabalho\projetos\bootcamp-dotnet-dio\aula-13-12\obj\Debug\net8.0\aula-13-12.AssemblyInfoInputs.cache
+C:\Users\nicso\OneDrive\Área de Trabalho\projetos\bootcamp-dotnet-dio\aula-13-12\obj\Debug\net8.0\aula-13-12.AssemblyInfo.cs
+C:\Users\nicso\OneDrive\Área de Trabalho\projetos\bootcamp-dotnet-dio\aula-13-12\obj\Debug\net8.0\aula-13-12.csproj.CoreCompileInputs.cache
+C:\Users\nicso\OneDrive\Área de Trabalho\projetos\bootcamp-dotnet-dio\aula-13-12\obj\Debug\net8.0\aula-13-12.dll
+C:\Users\nicso\OneDrive\Área de Trabalho\projetos\bootcamp-dotnet-dio\aula-13-12\obj\Debug\net8.0\refint\aula-13-12.dll
+C:\Users\nicso\OneDrive\Área de Trabalho\projetos\bootcamp-dotnet-dio\aula-13-12\obj\Debug\net8.0\aula-13-12.pdb
+C:\Users\nicso\OneDrive\Área de Trabalho\projetos\bootcamp-dotnet-dio\aula-13-12\obj\Debug\net8.0\aula-13-12.genruntimeconfig.cache
+C:\Users\nicso\OneDrive\Área de Trabalho\projetos\bootcamp-dotnet-dio\aula-13-12\obj\Debug\net8.0\ref\aula-13-12.dll
