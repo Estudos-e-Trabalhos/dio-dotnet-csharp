@@ -1,22 +1,100 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using aula_13_12.Models;
 
-Console.WriteLine("Hello, World!");
+
+
+
+
+// operador NOT - !
+
+bool choveu = false;
+bool estaTarde = false;
+
+// caso ele espere true e esteja o sinal de negação ele espera false
+// caso esteja false eles irão esperar true
+if (!choveu && !estaTarde){
+    Console.WriteLine("Vou pedalar");
+} else {
+    Console.WriteLine("Vou pedalar outro dia");
+
+}
+
+// operador AND && - mais restritivo
+
+bool represencaMinima = false;
+double media = 7.5;
+
+if(represencaMinima && media >= 7){
+        Console.WriteLine("Aprovado");
+} else {
+    Console.WriteLine("Reprovado");
+}
+
+// operador OR ||
+bool ehMaiorDeIdade = false;
+bool possuiAutirizacaoDoResponsavel = true;
+
+if(ehMaiorDeIdade || possuiAutirizacaoDoResponsavel){
+    Console.WriteLine("Entrada liberada");
+
+} else {
+    Console.WriteLine("Entrada não liberada");
+}
+
+// switch case
+
+Console.WriteLine("Digite uma letra");
+
+string? letra = Console.ReadLine();
+
+switch(letra){
+    case "a":
+    case "e":
+    case "i":
+    case "o":
+    case "u":
+        Console.WriteLine("Vogal");
+        break;
+    default:
+        Console.WriteLine("Não é uma Vogal");
+        break;
+}
+
+if(letra == "a" || 
+    letra == "e" || 
+    letra == "i" || 
+    letra == "o" || 
+    letra == "u"
+){
+        Console.WriteLine("vogal");
+
+} else {
+    Console.WriteLine("Não é uma vogal");
+
+}
 
 // Operador condicional 
 
 int quantidadeEmEstoque = 10;
+int quantidadeCompra = 0;
+bool possivelVenda = quantidadeCompra > 0 && quantidadeEmEstoque >= quantidadeCompra; // operador ternario
 
-int quantidadeCompra = 4;
+Console.WriteLine($"Quantidade em estoque: {quantidadeEmEstoque}");
+Console.WriteLine($"Quantidade Compra: {quantidadeCompra}");
+Console.WriteLine($"é possivel realizar venda? {possivelVenda}");
 
-if(quantidadeEmEstoque >= quantidadeCompra){
+if(quantidadeCompra == 0){
+        Console.WriteLine("Venda invalida");
+} else if(quantidadeEmEstoque >= quantidadeCompra){
     Console.WriteLine("Venda realizada");
+    quantidadeEmEstoque = quantidadeEmEstoque -= quantidadeCompra;
+    Console.WriteLine($"Quantidade de estoque restante: {quantidadeEmEstoque}");
+
 } else {
     Console.WriteLine("Desculpe, não temos a quantidade desejada em estoque.");
-
 }
 
- 
+
 // Convertendo de forma segura
 
 string aNumber = "15";
