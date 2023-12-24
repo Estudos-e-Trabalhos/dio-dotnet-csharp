@@ -2,8 +2,32 @@
 using aula_13_12.Models;
 
 
+// Incremento e Decremento
+
+int numeroIncremento = 10;
+int numeroDecremento = 10;
+Console.WriteLine(numeroIncremento);
+Console.WriteLine(numeroDecremento);
+
+//numero = numero + 1;
+numeroIncremento++;
+numeroDecremento--;
+
+Console.WriteLine(numeroIncremento);
+Console.WriteLine(numeroDecremento);
 
 
+// usando a classe calculadora
+
+Calculadora calcu = new Calculadora();
+
+calcu.Somar(2, 8);
+calcu.Potencia(3, 3);
+calcu.Seno(30);
+calcu.Coseno(30);
+calcu.Tangente(30);
+
+calcu.RaizQuadrada(9);
 
 // operador NOT - !
 
@@ -12,9 +36,12 @@ bool estaTarde = false;
 
 // caso ele espere true e esteja o sinal de negação ele espera false
 // caso esteja false eles irão esperar true
-if (!choveu && !estaTarde){
+if (!choveu && !estaTarde)
+{
     Console.WriteLine("Vou pedalar");
-} else {
+}
+else
+{
     Console.WriteLine("Vou pedalar outro dia");
 
 }
@@ -24,9 +51,12 @@ if (!choveu && !estaTarde){
 bool represencaMinima = false;
 double media = 7.5;
 
-if(represencaMinima && media >= 7){
-        Console.WriteLine("Aprovado");
-} else {
+if (represencaMinima && media >= 7)
+{
+    Console.WriteLine("Aprovado");
+}
+else
+{
     Console.WriteLine("Reprovado");
 }
 
@@ -34,10 +64,13 @@ if(represencaMinima && media >= 7){
 bool ehMaiorDeIdade = false;
 bool possuiAutirizacaoDoResponsavel = true;
 
-if(ehMaiorDeIdade || possuiAutirizacaoDoResponsavel){
+if (ehMaiorDeIdade || possuiAutirizacaoDoResponsavel)
+{
     Console.WriteLine("Entrada liberada");
 
-} else {
+}
+else
+{
     Console.WriteLine("Entrada não liberada");
 }
 
@@ -47,7 +80,8 @@ Console.WriteLine("Digite uma letra");
 
 string? letra = Console.ReadLine();
 
-switch(letra){
+switch (letra)
+{
     case "a":
     case "e":
     case "i":
@@ -60,15 +94,18 @@ switch(letra){
         break;
 }
 
-if(letra == "a" || 
-    letra == "e" || 
-    letra == "i" || 
-    letra == "o" || 
+if (letra == "a" ||
+    letra == "e" ||
+    letra == "i" ||
+    letra == "o" ||
     letra == "u"
-){
-        Console.WriteLine("vogal");
+)
+{
+    Console.WriteLine("vogal");
 
-} else {
+}
+else
+{
     Console.WriteLine("Não é uma vogal");
 
 }
@@ -83,14 +120,19 @@ Console.WriteLine($"Quantidade em estoque: {quantidadeEmEstoque}");
 Console.WriteLine($"Quantidade Compra: {quantidadeCompra}");
 Console.WriteLine($"é possivel realizar venda? {possivelVenda}");
 
-if(quantidadeCompra == 0){
-        Console.WriteLine("Venda invalida");
-} else if(quantidadeEmEstoque >= quantidadeCompra){
+if (quantidadeCompra == 0)
+{
+    Console.WriteLine("Venda invalida");
+}
+else if (quantidadeEmEstoque >= quantidadeCompra)
+{
     Console.WriteLine("Venda realizada");
     quantidadeEmEstoque = quantidadeEmEstoque -= quantidadeCompra;
     Console.WriteLine($"Quantidade de estoque restante: {quantidadeEmEstoque}");
 
-} else {
+}
+else
+{
     Console.WriteLine("Desculpe, não temos a quantidade desejada em estoque.");
 }
 
