@@ -1,6 +1,154 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using aula_13_12.Models;
 
+// Listas 
+
+// Classe de lista<Tipo da Lista>
+
+List<string> listaString = new List<string>();
+
+listaString.Add("SP"); 
+listaString.Add("BA"); 
+listaString.Add("MO");
+
+for (int i = 0; i < listaString.Count; i++)
+{
+    Console.WriteLine($"o estado é {listaString[i]}");
+}
+
+foreach (var listaItem in listaString)
+{
+    Console.WriteLine($"o estado é {listaItem}");
+}
+
+Console.WriteLine($"Itens da minha lista: {listaString.Count} - Cpacidade: {listaString.Capacity}");
+
+listaString.Add("SC");
+listaString.Add("RJ");
+
+Console.WriteLine($"Itens da minha lista: {listaString.Count} - Cpacidade: {listaString.Capacity}");
+
+listaString.Remove("MO");
+
+Console.WriteLine($"Itens da minha lista: {listaString.Count} - Cpacidade: {listaString.Capacity}");
+
+
+// Arrays e listas
+
+int[] arrayInteiros = new int[3];
+
+arrayInteiros[0] = 72;
+arrayInteiros[1] = 64;
+arrayInteiros[2] = 50;
+
+// arrayInteiros[3] = 1;
+
+Array.Resize(ref arrayInteiros, arrayInteiros.Length * 2);
+
+for(int contador = 0; contador < arrayInteiros.Length; contador++)
+{
+    Console.WriteLine($"Posição número {contador} - {arrayInteiros[contador]}");
+}
+
+int contadorForeach = 0;
+foreach (var inteiro in arrayInteiros)
+{
+    Console.WriteLine($"Foreach com inteiros {inteiro} - {contadorForeach}");
+    contadorForeach++;
+}
+
+// Copiando um array para o outro
+
+int[] arrayInteirosDobrado = new int[arrayInteiros.Length * 2];
+Array.Copy(arrayInteiros, arrayInteirosDobrado, arrayInteiros.Length);
+
+// menu interativo com While
+
+bool exibirMenu = false;
+
+while (exibirMenu)
+{
+
+    Console.Clear();
+    Console.WriteLine("Digite a sua opção:");
+    Console.WriteLine("1 - Cadastrar cliente");
+    Console.WriteLine("2 - Buscar cliente ");
+    Console.WriteLine("3 - Apagar cliente");
+    Console.WriteLine("4 - Encerrar");
+
+    string? opcao = Console.ReadLine();
+
+    switch (opcao)
+    {
+        case "1": 
+            Console.WriteLine("Cadastro de cliente");
+            break;
+
+        case "2": 
+            Console.WriteLine("Buscar de cliente");
+            break;
+
+        case "3": 
+            Console.WriteLine("Apagar de cliente");
+            break;
+
+        case "4": 
+            Console.WriteLine("Encerrar");
+            exibirMenu = false;
+            // Environment.Exit(0); - ira encerrar o programa
+            break;
+
+        default:
+            Console.WriteLine("Opção invalida");
+            break;
+    }
+
+}
+
+// Estrutura de repetição - DO WHILE
+int numeroDoWhile = 0;
+int somaDoWhile = 0;
+
+do
+{
+
+    Console.WriteLine("Digite um número (0 para parar)");
+    numeroDoWhile = Convert.ToInt32(Console.ReadLine());
+
+    somaDoWhile += numeroDoWhile;
+
+} while (numeroDoWhile != 0);
+
+// caso precise debugar o do while mudar tipo de console na pasta vscode
+// para "integratedTerminal"
+Console.WriteLine($"Total da soma dos números digitados é: {somaDoWhile}");
+
+
+// Estruturas de repetição - WHILE
+
+int numeroWhile = 5;
+int contadorWhile = 0;
+
+while (contadorWhile <= 10)
+{
+    Console.WriteLine($"{numeroWhile} x {contadorWhile} = {numeroWhile * contadorWhile}");
+    contadorWhile++;
+
+    if (contadorWhile == 5)
+    {
+        break;
+    }
+
+}
+
+// Estruturas de repetição - FOR
+int numeroFor = 5;
+
+for (int contador = 0; contador <= 10; contador++)
+{
+    Console.WriteLine($"{numeroFor} x {contador} = {numeroFor * contador}");
+}
+
 
 // Incremento e Decremento
 
