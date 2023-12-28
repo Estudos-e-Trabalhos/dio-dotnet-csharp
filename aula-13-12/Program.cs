@@ -1,6 +1,28 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using aula_13_12.Models;
 
+
+// usando construtor
+Pessoa p3 = new Pessoa(nome: "Nicole", sobrenome: "Souza");
+p3.Idade = 19;
+p3.Apresentar();
+
+// normalmente
+Pessoa p4 = new Pessoa();
+p4.Nome = "Mar";
+p4.Sobrenome = "Roberta";
+p4.Idade = 21;
+
+Curso cursoDeIngles = new Curso();
+cursoDeIngles.Nome = "Ingles";
+cursoDeIngles.Alunos = new List<Pessoa>();
+
+cursoDeIngles.AdicionarAluno(p3);
+cursoDeIngles.AdicionarAluno(p4);
+
+cursoDeIngles.ListarAlunos();
+
+
 // Listas 
 
 // Classe de lista<Tipo da Lista>
