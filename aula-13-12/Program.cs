@@ -3,6 +3,98 @@ using System.Data;
 using System.Globalization;
 using aula_13_12.Models;
 
+// Dictionary - coleção de dados
+
+Dictionary<string, string> estados = new Dictionary<string, string>(); // garante que elementos sejam unicos de acordo com o primeiro elemento
+
+estados.Add("SP", "São Paulo"); // Não podemos alterar a chave
+estados.Add("BA", "Bahia");
+estados.Add("MG", "Minas Gerais");
+
+Console.WriteLine(estados["BA"]); // acesso ao valor
+
+
+foreach (var item in estados)
+{
+    Console.WriteLine(item.Key, item.Value);
+}
+
+estados.Remove("SP");
+estados["SP"] = "São Paulo - valor alterado";
+
+string chave = "SP";
+if (estados.ContainsKey(chave))
+{
+    Console.WriteLine($"Chave ja existente{chave}");
+}
+else
+{
+    Console.WriteLine($"Chave não existente, é seguro adicionar a chave {chave}");
+}
+
+// Pilha - Stack
+Stack<int> pilha = new Stack<int>();
+
+pilha.Push(4); // insere um objeto no topo da pilha
+pilha.Push(6);
+pilha.Push(8);
+pilha.Push(10);
+
+foreach (var item in pilha)
+{
+    Console.WriteLine(item.ToString());
+}
+
+pilha.Pop(); // remove o objeto do topo da pilha e o retorna
+
+// Fila Queue
+
+Queue<int> fila = new Queue<int>();
+
+fila.Enqueue(2); // adiciona elemento no fim da fila
+fila.Enqueue(4);
+fila.Enqueue(6);
+fila.Enqueue(8);
+
+foreach (var item in fila)
+{
+    Console.WriteLine(item.ToString());
+}
+
+fila.Dequeue(); // removendo primeiro elemento da fila
+
+// Throw
+
+//new ExemploExcecao().Metodo2();
+
+
+// Fazendo leitura de arquivo txt
+
+try
+{
+    string[] linhas = File.ReadAllLines("Arquivos/arquivoLeitura.txt");
+
+    foreach (var linha in linhas)
+    {
+        Console.WriteLine(linha);
+    }
+}
+catch (FileNotFoundException ex)
+{
+    Console.WriteLine(ex.ToString());
+}
+catch (Exception ex)
+{
+    Console.WriteLine(ex.ToString());
+}
+finally
+{
+    // o finally é executado independente de exceções
+    // durante o programa ou não
+    Console.WriteLine("FIM");
+}
+
+
 // Trabalhando com datas
 
 DateTime data = DateTime.Now;
@@ -20,12 +112,12 @@ DateTime dataFormat = DateTime.Parse("17/04/2022 18:00"); // converte string par
 
 string dataString = "2022-04-04 18:00";
 
-DateTime.TryParseExact(dataString, 
-                        "yyyy-MM-dd HH:mm", 
-                        CultureInfo.InvariantCulture, 
+DateTime.TryParseExact(dataString,
+                        "yyyy-MM-dd HH:mm",
+                        CultureInfo.InvariantCulture,
                         DateTimeStyles.None, out DateTime dataTimer); // recebemos a data que queremos trabalhar
-                                                        // seu formato, sua localização que aqui é independe
-                                                        // e caso ele consiga converter jogara em uma var chamada datetimer
+                                                                      // seu formato, sua localização que aqui é independe
+                                                                      // e caso ele consiga converter jogara em uma var chamada datetimer
 
 DateTime dataFormatString = DateTime.Parse(dataString); // converte string para uma data valida
 
@@ -43,7 +135,7 @@ decimal valorMonetario = 83.40M;
 Console.WriteLine($"{valorMonetario:C}");
 
 // alterando a localização da cultura
-Console.WriteLine(valorMonetario.ToString("C", CultureInfo.CreateSpecificCulture("en-US"))); 
+Console.WriteLine(valorMonetario.ToString("C", CultureInfo.CreateSpecificCulture("en-US")));
 
 // formatações persofinalizadas
 Console.WriteLine(valorMonetario.ToString("C1")); // apos o c podemos escolher as casas decimais
@@ -87,8 +179,8 @@ cursoDeIngles.ListarAlunos();
 
 List<string> listaString = new List<string>();
 
-listaString.Add("SP"); 
-listaString.Add("BA"); 
+listaString.Add("SP");
+listaString.Add("BA");
 listaString.Add("MO");
 
 for (int i = 0; i < listaString.Count; i++)
@@ -125,7 +217,7 @@ arrayInteiros[2] = 50;
 
 Array.Resize(ref arrayInteiros, arrayInteiros.Length * 2);
 
-for(int contador = 0; contador < arrayInteiros.Length; contador++)
+for (int contador = 0; contador < arrayInteiros.Length; contador++)
 {
     Console.WriteLine($"Posição número {contador} - {arrayInteiros[contador]}");
 }
@@ -160,19 +252,19 @@ while (exibirMenu)
 
     switch (opcao)
     {
-        case "1": 
+        case "1":
             Console.WriteLine("Cadastro de cliente");
             break;
 
-        case "2": 
+        case "2":
             Console.WriteLine("Buscar de cliente");
             break;
 
-        case "3": 
+        case "3":
             Console.WriteLine("Apagar de cliente");
             break;
 
-        case "4": 
+        case "4":
             Console.WriteLine("Encerrar");
             exibirMenu = false;
             // Environment.Exit(0); - ira encerrar o programa
