@@ -13,7 +13,7 @@ namespace aula_13_12.Models
         public void AdicionarAluno(Pessoa aluno)
         {
             Alunos.Add(aluno);
-        } 
+        }
 
         public int ObterQuantidadeDeAlunosMatriculados()
         {
@@ -31,10 +31,13 @@ namespace aula_13_12.Models
 
         public void ListarAlunos()
         {
-            foreach (var aluno in Alunos)
+
+            for (int count = 0; count < Alunos.Count; count++)
             {
-                Console.WriteLine(aluno.NomeCompleto);
+                string texto = "N° " + count + " - " + Alunos[count].NomeCompleto;
+                Console.WriteLine(texto);
             }
+
         }
 
     }

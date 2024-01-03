@@ -1,5 +1,63 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System.Data;
+using System.Globalization;
 using aula_13_12.Models;
+
+// Trabalhando com datas
+
+DateTime data = DateTime.Now;
+Console.WriteLine(data.ToString("dd/MM/yyyy HH:mm:ss"));
+// Existem diferença entre horarios representados com letras maiusculas ou minusculas, o mesmo funciona com datas
+// podemos verificar os formatos aceitos
+
+// formatando data e hora
+Console.WriteLine(data.ToShortDateString()); // apenas data
+Console.WriteLine(data.ToShortTimeString()); // apenas horas
+
+DateTime dataFormat = DateTime.Parse("17/04/2022 18:00"); // converte string para uma data valida
+
+// utilizando tryparse
+
+string dataString = "2022-04-04 18:00";
+
+DateTime.TryParseExact(dataString, 
+                        "yyyy-MM-dd HH:mm", 
+                        CultureInfo.InvariantCulture, 
+                        DateTimeStyles.None, out DateTime dataTimer); // recebemos a data que queremos trabalhar
+                                                        // seu formato, sua localização que aqui é independe
+                                                        // e caso ele consiga converter jogara em uma var chamada datetimer
+
+DateTime dataFormatString = DateTime.Parse(dataString); // converte string para uma data valida
+
+
+// alterando localização do codigosistema
+
+CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
+
+// convertendo valores monetarios
+
+decimal valorMonetario = 83.40M;
+
+// internamente as represenatacoes de moeda serão pegas do sistema
+// ou seja isso pode haver mudanças de acordo com a maquina 
+Console.WriteLine($"{valorMonetario:C}");
+
+// alterando a localização da cultura
+Console.WriteLine(valorMonetario.ToString("C", CultureInfo.CreateSpecificCulture("en-US"))); 
+
+// formatações persofinalizadas
+Console.WriteLine(valorMonetario.ToString("C1")); // apos o c podemos escolher as casas decimais
+
+// representação de porcentagem
+
+double porcetagem = .3421;
+Console.WriteLine(porcetagem.ToString("P"));
+
+
+// formatação de separadores
+
+double formartNumber = 123456;
+Console.WriteLine(formartNumber.ToString("aa-aa-aa"));
 
 
 // usando construtor
