@@ -3,6 +3,64 @@ using System.Data;
 using System.Globalization;
 using aula_13_12.Models;
 
+// IF TERNARIO
+
+int numero = 20;
+bool ehPar = false;
+
+ehPar = numero % 2 == 0;
+
+Console.WriteLine($"O {numero} é" + (ehPar ? "par" : "impar"));
+
+
+// forma covencional
+if (numero % 2 == 0)
+{
+    Console.WriteLine($"O {numero} é par");
+}
+else
+{
+    Console.WriteLine($"O {numero} é impar");
+}
+
+
+// Descontrutor
+
+// o descontrutor serve para separar informações do seu objeto
+
+Pessoa ana = new Pessoa("Ana clara", "Silva");
+
+(string nome, string sobrenome) = ana;
+Console.WriteLine(nome, sobrenome);
+
+// Declarando tupla
+
+(int Id, string Nome, string Sobrenome) tuplaNico = (18, "Nicole", "Souza");  // forma mais vantajosa de criação, pois permite nomear o atributo
+ValueTuple<int, string, string> outraTupla = (18, "Nicole", "Souza"); // segunda forma de declarar uma tupla
+var outroExemplo = Tuple.Create(18, "Nicole", "Souza");
+
+Console.WriteLine(tuplaNico.Nome);
+
+// Testando método de retorno de tuplas
+LeituraArquivo arquivo = new LeituraArquivo();
+var (sucesso, linhasArquivo, _) = arquivo.LerArquivo("Arquivos/arquivoLeitura.txt"); // desconstrução do objeto
+
+// Ao trabalhar com tuplas podemos faze o descarte de informações que não vamos utilizar, para isso apenas substitua
+// no local da informação em questão para o simbolo de _
+
+if (sucesso)
+{
+    //Console.WriteLine("Quantidade de linhas do arquivo:" + quantidadeLinhas);
+    foreach (var linha in linhasArquivo)
+    {
+        Console.WriteLine(linha);
+    }
+}
+else
+{
+    Console.WriteLine("Não foi possivel ler o arquivo");
+}
+
 // Dictionary - coleção de dados
 
 Dictionary<string, string> estados = new Dictionary<string, string>(); // garante que elementos sejam unicos de acordo com o primeiro elemento

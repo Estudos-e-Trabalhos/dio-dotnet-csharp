@@ -18,6 +18,14 @@ namespace aula_13_12.Models
             Sobrenome = sobrenome;
         }
 
+        public void Deconstruct(out string nome, out string sobrenome)
+        {
+            // aqui fazemos a operação inversa de cima, onde out é uma propriedade de saida
+            // onde o nome vai sair com o valor de Nome e sobrenome sai com o valor de Sobrenome
+            nome = Nome;
+            sobrenome = Sobrenome;
+        }
+
         private string _nome;
         private int _idade;
         public string Nome
