@@ -2,6 +2,37 @@
 using System.Data;
 using System.Globalization;
 using aula_13_12.Models;
+using Newtonsoft.Json;
+
+// DESERIALIZAÇÃO
+
+// CRIAMOS UMA CLASSE PARA REPRESENTAR O CONTEUDO DO ARQUIVO 
+
+string conteudo = File.ReadAllText("Arquivos/vendas.json");
+
+List<VendaDeserializada>? listVenda = JsonConvert.DeserializeObject<List<VendaDeserializada>>(conteudo);
+
+foreach (var venda in listVenda)
+{
+    Console.WriteLine(venda);
+}
+
+// SERIALIZAÇÃO
+
+DateTime dataAtualVenda = DateTime.Now;
+
+List<Venda> listaVendas = new List<Venda>(); // listando objetos do tipo venda
+
+Venda v1 = new Venda(1, "Material de escritorio", 25.00M, dataAtualVenda);
+Venda v2 = new Venda(2, "Licença de software", 110.00M, dataAtualVenda);
+
+listaVendas.Add(v1);
+listaVendas.Add(v2);
+
+string serializado = JsonConvert.SerializeObject(listaVendas, Formatting.Indented);
+File.WriteAllText("Arquivos/vendas.json", serializado);
+
+Console.WriteLine(serializado);
 
 // IF TERNARIO
 

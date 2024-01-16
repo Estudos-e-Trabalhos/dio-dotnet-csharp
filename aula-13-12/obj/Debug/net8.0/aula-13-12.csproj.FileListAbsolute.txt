@@ -13,3 +13,6 @@ C:\Users\nicso\OneDrive\Área de Trabalho\projetos\bootcamp-dotnet-dio\aula-13-1
 C:\Users\nicso\OneDrive\Área de Trabalho\projetos\bootcamp-dotnet-dio\aula-13-12\obj\Debug\net8.0\aula-13-12.genruntimeconfig.cache
 C:\Users\nicso\OneDrive\Área de Trabalho\projetos\bootcamp-dotnet-dio\aula-13-12\obj\Debug\net8.0\ref\aula-13-12.dll
 C:\Users\nicso\OneDrive\Área de Trabalho\projetos\bootcamp-dotnet-dio\aula-13-12\obj\Debug\net8.0\aula-13-12.sourcelink.json
+C:\Users\nicso\OneDrive\Área de Trabalho\projetos\bootcamp-dotnet-dio\aula-13-12\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\nicso\OneDrive\Área de Trabalho\projetos\bootcamp-dotnet-dio\aula-13-12\obj\Debug\net8.0\aula-13-12.csproj.AssemblyReference.cache
+C:\Users\nicso\OneDrive\Área de Trabalho\projetos\bootcamp-dotnet-dio\aula-13-12\obj\Debug\net8.0\aula-13-12.csproj.CopyComplete
