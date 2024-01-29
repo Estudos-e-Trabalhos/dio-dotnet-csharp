@@ -4,6 +4,45 @@ using System.Globalization;
 using aula_13_12.Models;
 using Newtonsoft.Json;
 
+// TIPOS ESPECIAIS - GENERIC
+
+MeuArray<int> arrayInteiro = new MeuArray<int>();
+
+arrayInteiro.AdicionarElementoArray(30);
+
+Console.WriteLine(arrayInteiro[0]);
+
+
+// TIPOS ESPECIAIS - DYNAMIC
+
+dynamic variavelDinamica = 4; // podemos mudar dados e tipo da variavel
+
+Console.WriteLine(variavelDinamica.GetType(), variavelDinamica);
+
+// TIPOS ESPECIAIS - ANONIMOS
+
+// permite apenas leitura da propriedade
+
+var tipoAnonimo = new { Nome = "Nicole", Sobrenome = "Nicole", Idade = 18};
+
+Console.WriteLine(tipoAnonimo.Idade);
+
+
+// TIPOS ESPECIAIS - NULOS
+
+bool? desejaReceberEmail = null;
+
+// HasValue - diferenrete de nulo
+// Value - valor verdadeiro (não consegue verificar valores nulos), deve ser usado com HasValue
+
+if (desejaReceberEmail.HasValue && desejaReceberEmail.Value)
+{
+    Console.WriteLine("O usuário optou por receber e-mail");
+}
+else
+{
+    Console.WriteLine("O usuário não respondeu ou optou por não receber e-mail");
+}
 // DESERIALIZAÇÃO
 
 // CRIAMOS UMA CLASSE PARA REPRESENTAR O CONTEUDO DO ARQUIVO 
@@ -34,12 +73,23 @@ File.WriteAllText("Arquivos/vendas.json", serializado);
 
 Console.WriteLine(serializado);
 
+var listaAnonima = listaVendas.Select(x => new { x.Produto, x.Preco}); // LISTA ANONIMA - COLEÇÃO ANONIMA
+
+// nesse caso limitamos o que queremos trazer que seja visivel
+foreach (var venda in listaAnonima)
+{
+    Console.WriteLine(venda); 
+}
+
 // IF TERNARIO
 
 int numero = 20;
 bool ehPar = false;
 
-ehPar = numero % 2 == 0;
+ehPar = numero.EhPar(); // não é necessario passar parametro, pois se referencia ao parametro atraves do this
+// o proprio parametro é a variavel
+
+// toda variavel inteira tem acesso a esse método
 
 Console.WriteLine($"O {numero} é" + (ehPar ? "par" : "impar"));
 

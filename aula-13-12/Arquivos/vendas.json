@@ -3,12 +3,14 @@
     "Id": 1,
     "Nome_Produto": "Material de escritorio",
     "Preco": 25.00,
-    "DataVenda": "2024-01-15T21:07:30.625879-03:00"
+    "DataVenda": "2024-01-15T21:07:30.625879-03:00",
+    "Desconto": null
   },
   {
     "Id": 2,
     "Nome_Produto": "Licença de software",
     "Preco": 110.00,
-    "DataVenda": "2024-01-15T21:07:30.625879-03:00"
+    "DataVenda": "2024-01-15T21:07:30.625879-03:00",
+    "Desconto": 10
   }
 ]

@@ -18,5 +18,6 @@ namespace aula_13_12.Models
         public string Produto { get; set; }
         public decimal Preco { get; set; }
         public DateTime DataVenda { get; set; }
+        public decimal? Desconto { get; set; }
     }
 }
