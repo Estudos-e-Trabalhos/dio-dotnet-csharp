@@ -3,7 +3,7 @@
 
 Repositorio para fins de documentar e registrar aprendizado e testes adquiridos durante o bootcamp de Formação .NET Developer da plataforma DIO.
 
-Particpe do bootcamp: [Formação .NET Developer DIO](https://web.dio.me/track/formacao-dotnet-developer)
+Participe do bootcamp: [Formação .NET Developer DIO](https://web.dio.me/track/formacao-dotnet-developer)
 
 ## Modulos concluidos
 
