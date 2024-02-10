@@ -4,6 +4,22 @@ using System.Globalization;
 using aula_13_12.Models;
 using Newtonsoft.Json;
 
+// HERANÇA
+
+Aluno a1 = new Aluno();
+
+a1.Nome = "Nicole";
+a1.Idade = 18;
+a1.Nota = 10;
+a1.Apresentar();
+
+
+Professor prof1 = new Professor();
+prof1.Nome = "Geovana";
+prof1.Idade = 20;
+prof1.Salario = 10000;
+prof1.Apresentar();
+
 // TIPOS ESPECIAIS - GENERIC
 
 MeuArray<int> arrayInteiro = new MeuArray<int>();

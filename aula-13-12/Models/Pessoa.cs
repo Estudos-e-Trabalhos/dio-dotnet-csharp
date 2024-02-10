@@ -66,7 +66,8 @@ namespace aula_13_12.Models
             
             }
 
-        public void Apresentar()
+        public virtual void Apresentar()
+        // o virtual significa que ele esta habito para aplicar polimorfismo/ser sobrescrito
         {
             Console.WriteLine($"Olá, meu nome é {NomeCompleto.ToUpper()}, e tenho {Idade} anos.");
         }
