@@ -1,21 +1,37 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.Data;
 using System.Globalization;
+using aula_13_12.Interfaces;
 using aula_13_12.Models;
 using Newtonsoft.Json;
 
+
+// INTERFACE - contrato, para ser considerado alguma coisa ela precia ter os metodos de implementação presentes
+// na interface
+ICalcuradora calcular = new Calc();
+
+
+// CLASSE ABSTRATA
+
+Corrente c1 = new Corrente();
+c1.Creditar(500);
+c1.ExibirSaldo();
+
+// CLASSE OBJECT
+
+Computador ec2 = new Computador();
+
+
 // HERANÇA
 
-Aluno a1 = new Aluno();
+Aluno a1 = new Aluno("Nicole");
 
-a1.Nome = "Nicole";
 a1.Idade = 18;
 a1.Nota = 10;
 a1.Apresentar();
 
 
-Professor prof1 = new Professor();
-prof1.Nome = "Geovana";
+Professor prof1 = new Professor("Geovana");
 prof1.Idade = 20;
 prof1.Salario = 10000;
 prof1.Apresentar();
@@ -39,7 +55,7 @@ Console.WriteLine(variavelDinamica.GetType(), variavelDinamica);
 
 // permite apenas leitura da propriedade
 
-var tipoAnonimo = new { Nome = "Nicole", Sobrenome = "Nicole", Idade = 18};
+var tipoAnonimo = new { Nome = "Nicole", Sobrenome = "Nicole", Idade = 18 };
 
 Console.WriteLine(tipoAnonimo.Idade);
 
@@ -89,12 +105,12 @@ File.WriteAllText("Arquivos/vendas.json", serializado);
 
 Console.WriteLine(serializado);
 
-var listaAnonima = listaVendas.Select(x => new { x.Produto, x.Preco}); // LISTA ANONIMA - COLEÇÃO ANONIMA
+var listaAnonima = listaVendas.Select(x => new { x.Produto, x.Preco }); // LISTA ANONIMA - COLEÇÃO ANONIMA
 
 // nesse caso limitamos o que queremos trazer que seja visivel
 foreach (var venda in listaAnonima)
 {
-    Console.WriteLine(venda); 
+    Console.WriteLine(venda);
 }
 
 // IF TERNARIO
@@ -313,8 +329,7 @@ p3.Idade = 19;
 p3.Apresentar();
 
 // normalmente
-Pessoa p4 = new Pessoa();
-p4.Nome = "Mar";
+Pessoa p4 = new Pessoa("Mar");
 p4.Sobrenome = "Roberta";
 p4.Idade = 21;
 
@@ -678,9 +693,8 @@ decimal preco = 1.80M;
 
 
 // classe pessoa
-Pessoa pessoa1 = new Pessoa();
+Pessoa pessoa1 = new Pessoa("Nicole");
 
-pessoa1.Nome = "Nicole";
 pessoa1.Idade = 18;
 pessoa1.Apresentar();
 

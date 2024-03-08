@@ -7,6 +7,17 @@ namespace aula_13_12.Models
 {
     public class Aluno : Pessoa
     {
+
+        public Aluno()
+        {
+            
+        }
+
+        // aqui nos estamos passamos o nome do aluno para a classe pessoa
+        public Aluno(string nome) : base(nome)
+        {
+
+        }
         public int Nota { get; set; }
 
         // sobrescrevendo metodo apresentar da classe pessoa/aplicando polimorfismo

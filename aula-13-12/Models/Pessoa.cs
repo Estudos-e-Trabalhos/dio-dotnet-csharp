@@ -10,7 +10,11 @@ namespace aula_13_12.Models
 
         public Pessoa()
         {
-
+            
+        }
+        public Pessoa(string nome)
+        {
+            Nome = nome;
         }
         public Pessoa(string nome, string sobrenome)
         {
@@ -33,7 +37,7 @@ namespace aula_13_12.Models
             // validações de retorno, todo retorno
             // efetivamente feito
             get => _nome; // body expression
-                
+
             // validção de set - caso seja facil é jogado uma excessão
             set
             {
@@ -50,10 +54,11 @@ namespace aula_13_12.Models
 
         public string NomeCompleto => $"{Nome} {Sobrenome}";
 
-        public int Idade { 
+        public int Idade
+        {
 
             get => _idade;
-            
+
             set
             {
                 if (value < 0)
@@ -63,8 +68,8 @@ namespace aula_13_12.Models
 
                 _idade = value;
             }
-            
-            }
+
+        }
 
         public virtual void Apresentar()
         // o virtual significa que ele esta habito para aplicar polimorfismo/ser sobrescrito
